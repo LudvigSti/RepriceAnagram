@@ -9,6 +9,7 @@ fun main() {
     val grouped = words.groupBy { signature(it) }
 
     grouped.values
+        .filter { it.size > 1 }
         .forEach {
             println(it.joinToString(" "))
         }
